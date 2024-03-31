@@ -1,0 +1,19 @@
+.css-j5r0tf {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #387096;
+  }
+  
+  .repayment {
+    color: #fff;
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+  }
+  
+  .repayment.ontime {
+    background-color: #01DB4B
+  }
+  
+  .repayment.late {
+    background-color: #ff4b4b
+  }
