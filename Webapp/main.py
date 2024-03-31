@@ -10,7 +10,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import LabelEncoder
 
 def get_clean_data():
-    df = pd.read_excel(r'C:/Users/admin/Downloads/Data.xlsx')
+    df = pd.read_excel('data/Data.xlsx')
     data = df.iloc[:, 1:]
     data.info()
     for col in data.columns:
@@ -84,8 +84,8 @@ def get_scaled_values():
     return X_scaled
 
 def add_predictions(feature):
-  model = pkl.load(open("C:/Users/admin//Downloads/Compressed/Workspace/Python/LoanPrediction/train_model/model.pkl", "rb"))
-  scaler = pkl.load(open("C:/Users/admin//Downloads/Compressed/Workspace/Python/LoanPrediction/train_model/scaler.pkl", "rb"))
+  model = pkl.load(open("train_model/model.pkl", "rb"))
+  scaler = pkl.load(open("train_model/scaler.pkl", "rb"))
   
 
   input_array_scaled = scaler.transform(feature)
@@ -112,7 +112,7 @@ def main():
     initial_sidebar_state="expanded"
   )
 
-  with open("C:/Users/admin/Downloads/Compressed/Workspace/Python/LoanPrediction/assets/style.css") as f:
+  with open("assets/style.css") as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
   
   with st.container():
