@@ -84,8 +84,8 @@ def get_scaled_values():
     return X_scaled
 
 def add_predictions(feature):
-  model = pkl.load(open("C:/Users/admin//Downloads/Compressed/WorkSpace/Python/LoanPrediction/train_model/model.pkl", "rb"))
-  scaler = pkl.load(open("C:/Users/admin//Downloads/Compressed/WorkSpace/Python/LoanPrediction/train_model/scaler.pkl", "rb"))
+  model = pkl.load(open("C:/Users/admin//Downloads/Compressed/Workspace/Python/LoanPrediction/train_model/model.pkl", "rb"))
+  scaler = pkl.load(open("C:/Users/admin//Downloads/Compressed/Workspace/Python/LoanPrediction/train_model/scaler.pkl", "rb"))
   
 
   input_array_scaled = scaler.transform(feature)
@@ -112,7 +112,7 @@ def main():
     initial_sidebar_state="expanded"
   )
 
-  with open("C:/Users/admin/Downloads/Compressed/WorkSpace/Python/LoanPrediction/assets/style.css") as f:
+  with open("C:/Users/admin/Downloads/Compressed/Workspace/Python/LoanPrediction/assets/style.css") as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
   
   with st.container():
@@ -133,6 +133,6 @@ def main():
     st.session_state.button_clicked = True
     if  st.session_state.button_clicked:
         add_predictions(feature)
-    
+  st.write()
 if __name__ == '__main__':
   main()

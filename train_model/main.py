@@ -49,10 +49,10 @@ def main():
     data = get_clean_data()
     model, scaler = create_model(data)
 
-    with open('C:/Users/admin//Downloads/Compressed/WorkSpace/Python/LoanPrediction/train_model/model.pkl', 'wb') as f:
+    with open('C:/Users/admin//Downloads/Compressed/Workspace/Python/LoanPrediction/train_model/model.pkl', 'wb') as f:
         pkl.dump(model, f)
 
-    with open('C:/Users/admin//Downloads/Compressed/WorkSpace/Python/LoanPrediction/train_model/scaler.pkl', 'wb') as f:
+    with open('C:/Users/admin//Downloads/Compressed/Workspace/Python/LoanPrediction/train_model/scaler.pkl', 'wb') as f:
         pkl.dump(scaler, f)
 
 if __name__ == '__main__':
